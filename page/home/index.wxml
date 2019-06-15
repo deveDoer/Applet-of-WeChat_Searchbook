@@ -1,1 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
 
+  <view class="section" style="width:95%;">
+    <form bindsubmit="formSubmit">
+      <input class="weui-search-bar__input input-search" maxlength="20" confirm-type="search"
+      bindconfirm="confirmEvent" name="s_name" placeholder="Please enter the name of the novel" />
+      <button class="input-btn" type="primary" size="mini" hover-class="other-button-hover" formType="submit">Search</button>
+    </form>
+  </view>
+
+  <button class="btn-contact" open-type="contact" hover-class="btn-contact-hover">Support
+  </button>
+
+  <view class="footer" style="display:{{footer_visible}}">
+    <label>Reading log（<text class="t" bindlongtap="bindlongRemoveRecodtap">Remove</text>）:</label>
+    <label class="clear"></label>
+    <view class="classname">
+      <block wx:for="{{historyList}}" wx:key="bookObj.id" wx:for-item="historyObj">
+        <view class="item">
+          <label class="b-n">【{{historyObj.bookname}}】</label>
+          <navigator url="{{historyObj.url}}">{{historyObj.chaptername}}</navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+</view>
