@@ -9,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "Search book",
+    "navigationBarTitleText": "Search novel",
     "navigationBarTextStyle": "white"
   },
   "debug": false,
