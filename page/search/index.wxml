@@ -1,0 +1,25 @@
+<import src="../template/book-item.wxml" />
+
+<view class="section" style="padding:5px 10px 0;">
+  <view class="section" style="width:100%;">
+    <form bindsubmit="formSubmit">
+      <input class="weui-search-bar__input input-search" maxlength="20" confirm-type="search" bindconfirm="confirmEvent" name="s_name" value="{{s}}" placeholder="请输入小说名称" />
+      <button class="input-btn" type="primary" size="mini" hover-class="other-button-hover" formType="submit">搜索</button>
+    </form>
+    <!--<label style="font-size:14px;color:#aaa;">搜索到43个结果</label>-->
+  </view>
+  
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="project-container">
+      <scroll-view style="height: 100%;" lower-threshold="100" scroll-y="true">
+        <block wx:for="{{books}}" wx:key="bookObj.id" wx:for-item="bookObj">
+          <view class="project-item">
+            <template is="bookItem" data="{{bookObj}}" />
+          </view>
+        </block>
+      </scroll-view>
+
+      <view class="classname" style="text-align: center;font-size: 30rpx;color: #ccc;">{{resmsg}}</view>
+    </view>
+  </view>
+</view>
