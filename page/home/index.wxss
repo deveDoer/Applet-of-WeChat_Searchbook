@@ -1,0 +1,105 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 228rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  min-width: 128rpx;
+  min-height: 128rpx;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+input {
+  border: 1px solid #ccc;
+}
+
+button::after {
+  border-radius: unset;
+}
+
+.other-button-hover {
+  background-color: #008300 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.input-search {
+  width: 71%;
+  float: left;
+  padding: 2px 5px;
+  border-right: none;
+}
+
+.input-btn {
+  width: 25%;
+  border-left-width: 0 !important;
+  border-radius: 0px !important;
+  padding: 5px 0 0 !important;
+}
+
+.footer {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  font-size: 26rpx;
+  display: none;
+  padding-left: 5px;
+}
+
+.footer label {
+  float: left;
+  color: #999;
+}
+
+.footer .b-n {
+  color: #000;
+}
+
+.footer navigator {
+  float: left;
+  text-decoration: underline;
+  color: blue;
+}
+
+.footer .item {
+  clear: both;
+}
+
+.btn-contact {
+  border: none;
+  background-color: #fff;
+  font-size: 26rpx;
+  color: blue;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.btn-contact::after {
+  border: none;
+}
+
+.btn-contact-hover {
+  background-color: #ddd !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.t {
+  text-decoration: underline;
+}
