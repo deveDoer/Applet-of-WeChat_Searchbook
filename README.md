@@ -25,3 +25,11 @@ style="display:{{footer_visible}}"
 动态控制显/隐
 Bindlongtap = “bindlongRemoveRecordtap”
 绑定方法：长按以移除阅读记录
+
+三、search 搜索页
+wxml分三个部分
+1､表单部分 
+form 
+  input 输入搜索内容
+    value="{{s}}"  输入框的初始内容
+2､
