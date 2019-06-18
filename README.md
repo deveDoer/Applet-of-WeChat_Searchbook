@@ -32,4 +32,30 @@ wxml分三个部分
 form 
   input 输入搜索内容
     value="{{s}}"  输入框的初始内容
-2､
+2､结果列表
+Scroll-view 可滚动视图区域 
+    "height:100%" 
+    Lower-threshold="100" 距底部/右边多远时，触发 scrolltolower 事件
+  bolck 列表循环 wx:for="{{books}}"  x:for-item="bookobj" 
+    template is="bookItem" data="{{bookobj}}"
+
+3､{{resmsg}} 搜索结果为空时显示的内容 
+
+四、intro 文章介绍
+          that.setData({
+            bookInfo: {
+              bookname: response.data.bookname,
+              author: response.data.author,
+              status: response.data.status,
+              last_update_time: response.data.last_update_time,
+              last_update_chapter: response.data.last_update_chapter,
+              last_update_chapterlink: response.data.last_update_chapterlink,
+              intro: response.data.intro,
+              chapters: response.data.list
+            }
+          })
+
+五、read 阅读详情
+章节名称 bookobj.chaptername
+章节内容 bookobj.content
+章节导航 bookobj.prevlink bookobj.chapterlink bookobj.nextlink 
